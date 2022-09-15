@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+
+<!--To make any field mandatory use the attribute "required"-->
+
+<body>
+    <form>
+        <h1><u>Payment Form</u></h1>
+        <h2><u>Contact Information</u></h2>
+        <p>Required fields are followed by *</p>
+        <hr>
+        <p>Name: *<input type="text" name="Name" required></p><!--The star in this line is just indicative of the fact that name is mandatory but the work is done by the required attribute-->
+        <fieldset>
+            <legend>Gender</legend>
+        <p>
+            Male <input type="radio" name="Gender" id="male">
+            Female <input type="radio" name="Gender" id="female">
+
+        </p>
+        </fieldset>
+        <p>Address: <textarea name="address" id="address" cols="70" row="12"></textarea></p>
+        <p>Email: <input type="email" name="email" id="email"></p>
+        <p>Pincode: <input type="number" name="pincode" id="pincode"></p>
+        <hr>
+        <h2><u>Payment Information</u></h2>
+        <p>Card Type: *
+            <select name="Card_type" id="Card_type" required>
+                <option value="">--Select a card type--</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Rupay">Rupay</option>
+
+            </select>
+        </p>
+        <p>
+            Card Number: *<input type="number" name="Card_number" id="Card_number" required>
+        </p>
+        <p>
+            Expiry Date: *<input type="date" name="Exp_date" id="Exp_date" required>
+        </p>
+        <p>
+            CVV: *<input type="password" name="CVV" id="CVV" required>
+        </p>
+        <input type="submit" value="Pay Now">
+    </form>
+</body>
+</html>
